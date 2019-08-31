@@ -1,20 +1,25 @@
-# News Sample App
+
+# News Sample App - MVVM Architecture
+
+This is a sample android project to show how MVVM works.
+The diagram bellow shows the **MVVM** architecture flow in android:
+
+![enter image description here](http://s-ebrahimi.com/lib_images/MVVM.png)
 
 
-## Used Components
+## Project Details
 
-- ViewModels
-- DataBinding
-- Paging
-- LiveData
-- Retrofit
-- Picasso
-- Material
-- Some UI components
+ - [x] Architecture is **MVVM**
+ - [x] Language is **Kotlin**
+ - [x] JetPack components are used : **ViewModel**, **LiveData**, **Data Binding**, **Paging**
+ - [x] Other used Libraries : **Retrofit**, **Picasso**, **Shimmer**
 
-## Configuration
+## Scren Shots
 
-- Writen in Kotlin
-- Minimum sdk version : 16
-- Target sdk version : 28
-- Compile sdk version : 28
+||||
+|--|--|--|
+| ![enter image description here](http://s-ebrahimi.com/lib_images/newsapp1.png) | ![enter image description here](http://s-ebrahimi.com/lib_images/newsapp2.png) |![enter image description here](http://s-ebrahimi.com/lib_images/newsapp3.png)|
+
+## NOTICE
+
+This sample uses [newsapi.org](https://newsapi.org/) free API. So if you want to use source code, better to have your own API key and put it in **Constants.kt** file.
