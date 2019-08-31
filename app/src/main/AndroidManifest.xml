@@ -1,0 +1,26 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+          package="com.s_ebrahimi.newssample">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <application android:allowBackup="true"
+                 android:label="@string/app_name"
+                 android:icon="@mipmap/ic_launcher_dn"
+                 android:roundIcon="@mipmap/ic_launcher_dn_round"
+                 android:supportsRtl="true"
+                 android:theme="@style/AppTheme"
+                 android:networkSecurityConfig="@xml/network_security_config"
+                 android:name="com.s_ebrahimi.newssample.CustomApplication">
+
+        <activity android:name="com.s_ebrahimi.newssample.activities.ArticleListActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.s_ebrahimi.newssample.activities.ArticleDetailActivity"></activity>
+    </application>
+
+</manifest>

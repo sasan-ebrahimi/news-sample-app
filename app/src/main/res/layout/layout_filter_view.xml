@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Filter"
+            android:fontFamily="@font/lora"
+            android:textAlignment="center"
+            android:padding="@dimen/space_large"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_title_size"
+    />
+
+
+    <include layout="@layout/divider"></include>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/space_large"
+            android:layout_height="match_parent">
+
+
+        <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Language"
+                android:layout_marginTop="@dimen/space_large"
+                android:fontFamily="@font/open_sans"
+                android:padding="@dimen/space_small"
+        />
+
+
+        <include layout="@layout/divider"></include>
+
+        <com.nex3z.togglebuttongroup.SingleSelectToggleGroup
+                android:id="@+id/group_language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_large"
+                app:tbgCheckedButton="@+id/choice_en">
+
+            <com.nex3z.togglebuttongroup.button.CircularToggle
+                    android:id="@+id/choice_en"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EN"/>
+
+            <com.nex3z.togglebuttongroup.button.CircularToggle
+                    android:id="@+id/choice_nl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NL"/>
+
+            <com.nex3z.togglebuttongroup.button.CircularToggle
+                    android:id="@+id/choice_fr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FR"/>
+
+
+            <com.nex3z.togglebuttongroup.button.CircularToggle
+                    android:id="@+id/choice_ar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AR"/>
+
+
+        </com.nex3z.togglebuttongroup.SingleSelectToggleGroup>
+
+        <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:fontFamily="@font/open_sans"
+                android:padding="@dimen/space_small"
+                android:layout_marginTop="@dimen/space_large"
+        />
+
+
+        <include layout="@layout/divider"></include>
+
+        <com.nex3z.togglebuttongroup.SingleSelectToggleGroup
+                android:id="@+id/group_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_large"
+                android:layout_marginBottom="@dimen/space_large"
+                app:tbgChildSpacing="auto"
+                app:tbgChildSpacingForLastRow="align"
+                app:tbgRowSpacing="8dp">
+
+            <com.nex3z.togglebuttongroup.button.LabelToggle
+                    android:id="@+id/choice_general"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="General"/>
+
+            <com.nex3z.togglebuttongroup.button.LabelToggle
+                    android:id="@+id/choice_business"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Business"/>
+
+            <com.nex3z.togglebuttongroup.button.LabelToggle
+                    android:id="@+id/choice_entertainment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Entertainment"/>
+
+            <com.nex3z.togglebuttongroup.button.LabelToggle
+                    android:id="@+id/choice_health"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Health"/>
+
+            <com.nex3z.togglebuttongroup.button.LabelToggle
+                    android:id="@+id/choice_science"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_medium"
+                    android:text="Science"/>
+
+            <com.nex3z.togglebuttongroup.button.LabelToggle
+                    android:id="@+id/choice_sports"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_medium"
+                    android:text="Sports"/>
+
+            <com.nex3z.togglebuttongroup.button.LabelToggle
+                    android:id="@+id/choice_technology"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_medium"
+                    android:text="Technology"/>
+
+        </com.nex3z.togglebuttongroup.SingleSelectToggleGroup>
+
+
+
+        <Button
+                android:text="Clear Category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:layout_marginBottom="@dimen/space_large"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:id="@+id/btn_clear_category"/>
+        <include layout="@layout/divider"></include>
+
+        <Button
+                android:text="Apply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_marginTop="@dimen/space_large"
+                android:id="@+id/btn_apply"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginLeft="@dimen/card_horizontal_margin"
+        android:layout_marginRight="@dimen/card_horizontal_margin"
+        android:layout_marginTop="@dimen/card_vertical_margin"
+        android:layout_marginBottom="@dimen/card_vertical_margin"
+        app:cardElevation="@dimen/card_elevation"
+        app:cardCornerRadius="@dimen/card_radius"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+    >
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_view_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shimmer_duration="400"
+                app:shimmer_repeat_delay="3500"
+                app:shimmer_repeat_mode="restart"
+                app:shimmer_tilt="@android:integer/config_shortAnimTime"
+                app:shimmer_base_alpha="1"
+                app:shimmer_highlight_alpha="0.8"
+                app:shimmer_width_ratio="0.3"
+        >
+
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/article_item_image_height"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/image"
+
+                    android:src="@drawable/placeholder_image"/>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+        <TextView
+                android:text="TextView"
+                android:textColor="@color/white"
+                android:padding="8dp"
+                android:background="@color/transparent_black"
+                android:layout_alignBottom="@+id/shimmer_view_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans"
+                android:id="@+id/tv_title"/>
+
+        <TextView
+                android:id="@+id/tv_source"
+                android:text="unknown"
+                android:layout_marginBottom="@dimen/space_small"
+                android:layout_marginRight="@dimen/space_small"
+                android:layout_above="@+id/tv_title"
+                android:layout_alignParentRight="true"
+                style="@style/TextViewSource"/>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

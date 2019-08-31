@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.ArticleDetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/toolbar"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_info"
+                    android:src="@drawable/ic_information"
+                    android:layout_height="28dp"
+                    android:layout_width="28dp"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="@dimen/space_large"
+            />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_filter"
+                    android:src="@drawable/ic_filter"
+                    android:layout_height="34dp"
+                    android:layout_width="34dp"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="@dimen/space_small"
+            >
+
+            </androidx.appcompat.widget.AppCompatImageView>
+
+
+            <androidx.appcompat.widget.SearchView
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:id="@+id/search_view"
+                    app:queryHint="Search Article"
+
+
+            >
+
+
+            </androidx.appcompat.widget.SearchView>
+
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/article_recycler_view"
+        >
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    <include layout="@layout/bottom_sheet"
+             app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <RelativeLayout
+            android:id="@+id/layout_error"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <com.s_ebrahimi.newssample.uicomponents.ErrorView
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:id="@+id/error_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></com.s_ebrahimi.newssample.uicomponents.ErrorView>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
