@@ -8,7 +8,6 @@ class Constants {
     companion object {
 
         const val API_KEY = "1982da221eb745e88f83160f3c3ac600"
-        //const val API_KEY = "3ab2113e04ad41f0814704ea369def69"
         const val BASE_URL = "https://newsapi.org/v2/"
 
         // A message to show to follow newsapi.org rules

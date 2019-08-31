@@ -1,21 +1,4 @@
-# Dutch News App
-
-
-## Apk file
-
-Since building Android project requires sdk and it is not available on hackerrank website I have uploaded the apk file to be downloaded 
-### You can download apk file using bellow link :
-http://s-ebrahimi.com/apks/dutchnews.apk
-
-## Implemented features
-
- - [x] All requirements of task are implemented
- - [x] Architecture is MVVM
- - [x] Extra features implemented
-
-### Extra Features Implemented in app
-- Search article
-- Filter articles based on language and category
+# News Sample App
 
 
 ## Used Components
